@@ -210,22 +210,22 @@
       <div class="container" data-aos="fade-up">
         <div class="section-title text-center">
 
-          <h2>Calculateur</h2></div>
+          <h2>La carte X est-elle dans mon jeu ? </h2></div>
           <h5 class="separator"></h5>
 
           <p id="calculateur" class="text-center">
 
-              Equation générale : probabilité d'avoir une carte X dans ses mains = ( nombre de cartes restantes de cette valeur - cartes visibles de cette valeur ) / (nombre total de cartes en jeu)
-            </p><br>
+              <i>Equation générale : probabilité d'avoir une carte X dans ses mains = ( nombre de cartes restantes de cette valeur - cartes visibles de cette valeur ) / (nombre total de cartes pertinentes en jeu)
+            </i></p><br>
 
             <form>
 Nombre de cartes restantes de cette valeur : <br><input type="text" id="firstNumber" /><br>
 Nombre de cartes visibles de cette valeur : <br><input type="text" id="secondNumber" /><br>
-Nombre de cartes total en jeu (- la somme des cartes visibles) : <br><input type="text" id="third" /><br>
+Nombre de cartes total en jeu (- la somme des cartes visibles et non pertinentes) : <br><input type="text" id="third" /><br>
 
 <input type="button" onClick="multiplyBy()" Value="GO" />
 </form>
-<p>Probas que cette carte soit dans ton jeu : <br>
+<p style='color: #DC143C;'><strong>Probas que cette carte soit dans mon jeu : </strong><br>
 <span style ="font-size: 50px;"id = "result"></span>
 </p>
 
@@ -298,6 +298,16 @@ function multiplyBy()
                     </div>
                   </div>
 
+                  <div class="carousel-item ">
+                    <div class="top-top">
+
+                      <h2>T'as dead ça</h2>
+                      <p>J'ai bien kiffé ton algo chakal, avec la team on fait du 3 fois 5 maintant oklm. Par contre j'ai pas tro compris l'equation là</p>
+                      <h4>Kévin<span>Champion</span></h4>
+
+                    </div>
+                  </div>
+
                 </div>
 
                 <div class="btm-btm">
@@ -306,6 +316,7 @@ function multiplyBy()
                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
                   </ul>
 
                 </div>
