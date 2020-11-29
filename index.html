@@ -221,7 +221,8 @@
             <form>
 Nombre de cartes restantes de cette valeur : <br><input type="text" id="firstNumber" /><br>
 Nombre de cartes visibles de cette valeur : <br><input type="text" id="secondNumber" /><br>
-Nombre de cartes total en jeu : <br><input type="text" id="third" /><br>
+Nombre de cartes total en jeu (- la somme des cartes visibles) : <br><input type="text" id="third" /><br>
+
 <input type="button" onClick="multiplyBy()" Value="GO" />
 </form>
 <p>Probas que cette carte soit dans ton jeu : <br>
@@ -236,8 +237,11 @@ function multiplyBy()
         num2 = document.getElementById("secondNumber").value;
         num3 = document.getElementById("third").value;
         var num4 = Number("100")
+        var num5 = Number("5")
 
-        document.getElementById("result").innerHTML = ( (num1 - num2) / num3 )*num4 + "%";
+
+
+        document.getElementById("result").innerHTML = (( (num1 - num2) / num3 )*num4)*num5 + "%";
 }
 
 
