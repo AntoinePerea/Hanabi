@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Hanabi</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/modal-video/css/modal-video.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: eStartup - v2.1.0
+  * Template URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="index.html"><span></span>Hanabi</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="index.html">Hanabi</a></li>
+          <li><a href="#about-us">Les 7 commandements</a></li>
+          <li><a href="#features">Tour de jeu</a></li>
+          <li><a href="#screenshots">Astuces</a></li>
+          <li><a href="#team">Calculateur</a></li>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Le petit guide qui passe bien</h1>
+      <h2>Pour finir le jeu tout en gardant les amitiés intactes</h2>
+      <img src="C:\Users\antoi\OneDrive\Documents\eStartup\assets\img\Shrine.svg" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
+      <a href="#about-us" class="btn-get-started scrollto">C'est partit cochon</a>
+
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Get Started Section ======= -->
+
+
+    </section><!-- End Get Started Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about-us" class="about-us padd-section text-center">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+
+
+
+          <div class="col-md-5 col-lg-9">
+            <div class="about-content" data-aos="fade-left" data-aos-delay="100">
+
+              <h2>Les 7 commandements</h2>
+
+
+              <ol >
+                <li >Je joue immédiatement une carte dont je dispose de suffisamment d'informations.</li>
+                <li >J'indique au minimum 2 informations par indices, à moins qu'une carte indispensable soit sur le point d'être défaussée.</li>
+                <li >Si je dois me défausser, je choisis toujours la carte non étiquetée la plus ancienne.</li>
+                <li >Lorsque j'indique la couleur ou le nombre d'une carte qui ne dispose alors que de cette seule information, cela revient à indiquer que la carte peux être jouée immédiatement SAUF si cette carte était sur le point d'être défaussée.</li>
+                <li >S'il ne reste qu'un seul indice et que le prochain joueur ne dispose pas de suffisamment d'informations pour jouer; utiliser l'indice revient à lui indiquer que sa carte non étiquetée la plus ancienne est défaussable.</li>
+                <li >Lorsqu'une carte étiquetée est présente dans mon jeu, je considère toujours en premier lieu qu'elle ne doit pas être défaussée.</li>
+
+                <li >Je ne compte pas sur le joueur suivant pour donner une information que je juge utile.</li>
+
+              </ol>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="padd-section text-center">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h2>Tour de jeu</h2>
+          <p class="separator">Petit algo Oklm (flemme de faire un diagramme 🤣)</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/paint-palette.svg" alt="img" class="img-fluid">
+              <h3>1</h3>
+              <p>Est ce qu'une carte indispensable est sur le point d'être défaussée ? Si oui, j'utilise un indice. Sinon -> <strong>2</strong></p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/vector.svg" alt="img" class="img-fluid">
+              <h3>2</h3>
+              <p>Est ce que je dispose de suffisamment d'informations pour jouer ? Si oui, je joue. Sinon -> <strong>3</strong></p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/design-tool.svg" alt="img" class="img-fluid">
+              <h3>3</h3>
+              <p>Est ce que je dispose de suffisamment d'informations pour me défausser d'une carte ? Je défausse, sinon -> <strong>4</strong></p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/asteroid.svg" alt="img" class="img-fluid">
+              <h3>4</h3>
+              <p>Reste t'il au moins deux indices ? J'utilise un indice. Sinon -> <strong>5</strong></p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/asteroid.svg" alt="img" class="img-fluid">
+              <h3>5</h3>
+              <p>Le joueur suivant dispose t-il de suffisamment d'informations pour jouer ? Si oui, j'utilise un indice. Sinon -> <strong>6</strong></p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/cloud-computing.svg" alt="img" class="img-fluid">
+              <h3>6</h3>
+              <p>Je donne l'information au prochain joueur afin qu'il puisse jouer, si c'est impossible, j'utilise l'indice ailleurs.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="feature-block">
+              <img src="assets/img/svg/cloud-computing.svg" alt="img" class="img-fluid">
+              <h4>Cas où je n'ai pas d'indices disponibles à mon tour de jeu</h4>
+              <p>Je défausse ma carte non étiquetée la plus ancienne.</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section><!-- End Features Section -->
+
+    <!-- ======= Screenshots Section ======= -->
+    <section id="screenshots" class="padd-section text-center">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+          <h2>Astuces</h2>
+          <h5 class="separator"></h5>
+          <p>Les risques sont à prendre à la fin, comptage et probabilités à l'appuis. <br><br>
+            Anticipe toujours l'épuisement des indices, afin d'évaluer au mieux qui s'en retrouvera privé, et quelles en seront les conséquences probables.
+
+
+
+          </p>
+        </div>
+
+
+      </div>
+
+    </section><!-- End Screenshots Section -->
+  <section class ="text-center">
+
+<img style ="height: 300px;" src="assets\img\CAT NINJA.jpg" alt="Oups">
+</section>
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="padd-section ">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-center">
+
+          <h2>Calculateur</h2></div>
+          <h5 class="separator"></h5>
+
+          <p id="calculateur" class="text-center">
+
+              Equation générale : probabilité d'avoir une carte X dans ses mains = ( nombre de cartes restantes de cette valeur - cartes visibles de cette valeur ) / (nombre total de cartes en jeu)
+            </p><br>
+
+            <form>
+Nombre de cartes restantes de cette valeur : <br><input type="text" id="firstNumber" /><br>
+Nombre de cartes visibles de cette valeur : <br><input type="text" id="secondNumber" /><br>
+Nombre de cartes total en jeu : <br><input type="text" id="third" /><br>
+<input type="button" onClick="multiplyBy()" Value="GO" />
+</form>
+<p>Probas que cette carte soit dans ton jeu : <br>
+<span style ="font-size: 50px;"id = "result"></span>
+</p>
+
+<script>
+
+function multiplyBy()
+{
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        num3 = document.getElementById("third").value;
+        var num4 = Number("100")
+
+        document.getElementById("result").innerHTML = ( (num1 - num2) / num3 )*num4 + "%";
+}
+
+
+
+
+</script>
+
+
+        </div>
+
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="padd-section text-center">
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+
+          <div class="col-md-8">
+
+            <div class="testimonials-content">
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner" role="listbox">
+
+                  <div class="carousel-item  active">
+                    <div class="top-top">
+
+                      <h2>Antoine le boss</h2>
+                      <p>Grâce à toi on a enfin pu terminer le jeu, quel crack ! </p>
+                      <h4>Mathieu<span>Hanabiste</span></h4>
+
+                    </div>
+                  </div>
+
+                  <div class="carousel-item ">
+                    <div class="top-top">
+
+                      <h2>J'ai évité la catastrophe</h2>
+                      <p>Heureusement que je suis tombée sur ton tutoriel, mon couple était mis à mal à cause de ce jeu !  </p>
+                      <h4>Mélodie<span>Hobbyiste</span></h4>
+
+                    </div>
+                  </div>
+
+                  <div class="carousel-item ">
+                    <div class="top-top">
+
+                      <h2>Super Antoine</h2>
+                      <p>Enfin un guide complet. Un grand merci. </p>
+                      <h4>Jérémy<span>Hanabiste</span></h4>
+
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="btm-btm">
+
+                  <ul class="list-unstyled carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                  </ul>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Testimonials Section -->
+
+
+    <!-- ======= Blog Section ======= -->
+
+    <!-- End Blog Section -->
+
+    <!-- ======= Newsletter Section ======= -->
+    <section id="newsletter" class="newsletter text-center">
+      <div class="overlay padd-section">
+        <div class="container" data-aos="zoom-in">
+
+          <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-6">
+              <form class="form-inline" method="POST" action="#">
+
+                <input type="email" class="form-control " placeholder="Email Adress" name="email">
+                <button type="submit" class="btn btn-default"><i class="fa fa-location-arrow"></i>Subscribe</button>
+
+              </form>
+
+            </div>
+          </div>
+
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+
+        </div>
+      </div>
+    </section><!-- End Newsletter Section -->
+
+    <!-- ======= Contact Section ======= -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12 col-lg-4">
+          <div class="footer-logo">
+
+            <a class="navbar-brand" href="#">Hanabi</a>
+            <p>Alors ce Hanabi ? 5x5 ?</p>
+
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3 col-lg-2">
+          <div class="list-menu">
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="copyrights">
+      <div class="container">
+        <p>&copy; Copyrights eStartup. All rights reserved.</p>
+        <div class="credits">
+          <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
+        -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/modal-video/js/modal-video.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/superfish/superfish.min.js"></script>
+  <script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
