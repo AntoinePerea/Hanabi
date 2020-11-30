@@ -210,6 +210,8 @@ span {
   }
 }
 
+
+
 #hero .hero-container {
   position: absolute;
   bottom: 0;
@@ -310,6 +312,7 @@ span {
   margin: 0;
   padding: 0;
   list-style: none;
+  ;
 }
 
 .nav-menu ul {
@@ -366,11 +369,13 @@ span {
 #nav-menu-container {
   float: right;
   margin: 0 0 0 0;
+
 }
 
 @media (max-width: 1024px) {
   #nav-menu-container {
     display: none;
+
   }
 }
 
