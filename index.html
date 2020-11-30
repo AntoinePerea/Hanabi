@@ -15,7 +15,7 @@
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
@@ -66,9 +66,9 @@
     <div class="hero-container" data-aos="fade-in">
       <h1 style="margin-top: 50px;">Guide du Joueur Intrépide</h1>
       <h2>Pour finir le jeu tout en gardant les amitiés intactes</h2>
-  <div class="content">
-      <img style="max-width: 30%; height: auto;" src="assets\img\sabre.png" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
-</div>
+      <div class="content">
+        <img style="max-width: 30%; height: auto;" src="assets\img\sabre.png" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
+      </div>
 
       <a href="#about-us" class="btn-get-started scrollto">C'est partit cochon</a>
 
@@ -97,7 +97,7 @@
 
               <ol>
                 <li>Je joue immédiatement une carte dont je dispose de suffisamment d'informations.</li>
-                <li>J'indique au minimum 2 informations par indices, à moins qu'une carte indispensable soit sur le point d'être défaussée.</li>
+                <li>J'indique au minimum 2 informations par indice, à moins qu'une carte indispensable soit sur le point d'être défaussée.</li>
                 <li>Si je dois me défausser, je choisis toujours la carte non étiquetée la plus ancienne.</li>
                 <li>Lorsque j'indique la couleur ou le nombre d'une carte qui ne dispose alors que de cette seule information, cela revient à indiquer que la carte peux être jouée immédiatement SAUF si cette carte était sur le point d'être défaussée.
                 </li>
@@ -221,7 +221,7 @@
         <h5 class="separator"></h5>
 
         <p id="calculateur" class="text-center">
-<img style="height: 200px"src="assets\img\dice_001.jpg" alt="dés">
+          <img style="height: 200px" src="assets\img\dice_001.jpg" alt="dés">
           <i>
           </i></p><br>
 
@@ -236,7 +236,8 @@
           <input type="button" onClick="multiplyBy()" Value="GO" />
         </form>
         <p style='color: #DC143C;'><strong>Probas que cette carte soit dans mon jeu : </strong><br>
-          <span style="font-size: 50px;" id="result"></span>
+          <span style="font-size: 50px;" id="result"></span><br>
+          <span style="font-size: 50px;" id="msg"></span>
         </p>
 
         <script>
@@ -281,17 +282,52 @@
             var resultatDeux = exactementUn + exactementDeux
             var resultatTroiscarjesaisquetuvaletesterpabloalorsquecarriverajamaisfdpxD = exactementUn + exactementDeux + exactementTrois
 
+            var Un = Math.round(exactementUn * cent)
+            var Deux = Math.round(resultatDeux * cent)
+            var Trois = Math.round(resultatTroiscarjesaisquetuvaletesterpabloalorsquecarriverajamaisfdpxD * cent)
+
+
 
             if (m == 1) {
-              document.getElementById("result").innerHTML = Math.round(exactementUn * cent) + "%";
+              document.getElementById("result").innerHTML = Un + "%";
             } else if (m == 2) {
-              document.getElementById("result").innerHTML = Math.round(resultatDeux * cent) + "%";
+              document.getElementById("result").innerHTML = Deux + "%";
             } else {
-              document.getElementById("result").innerHTML = Math.round(resultatTroiscarjesaisquetuvaletesterpabloalorsquecarriverajamaisfdpxD * cent) + "%";
+              document.getElementById("result").innerHTML = Trois + "%";
             }
 
 
+            if (m == 1 && Un > 80) {
+              document.getElementById("msg").innerHTML = "ça se tente ! ";
+            } else if (m == 2 && Deux > 80) {
+              document.getElementById("msg").innerHTML = "ça se tente ! ";
+            } else if (m == 3 && Trois > 80) {
+              document.getElementById("msg").innerHTML = "ça se tente ! ";
+            }
 
+            if (m == 1 && Un < 80 && Un > 60) {
+              document.getElementById("msg").innerHTML = "T'as des couilles ?";
+            } else if (m == 2 && Deux < 80 && Deux > 60) {
+              document.getElementById("msg").innerHTML = "T'as des couilles ?";
+            } else if (m == 3 && Trois < 80 && Trois > 60) {
+              document.getElementById("msg").innerHTML = "T'as des couilles ?";
+            }
+
+            if (m == 1 && Un > 30 && Un < 60) {
+              document.getElementById("msg").innerHTML = "Laisse tomber";
+            } else if (m == 2 && Deux > 30 && Deux < 60) {
+              document.getElementById("msg").innerHTML = "Laisse tomber";
+            } else if (m == 3 && Trois > 30 && Trois < 60) {
+              document.getElementById("msg").innerHTML = "Laisse tomber";
+            }
+
+            if (m == 1 && Un < 30) {
+              document.getElementById("msg").innerHTML = "Si tu tente j'te défonce";
+            } else if (m == 2 && Deux < 30) {
+              document.getElementById("msg").innerHTML = "Si tu tente j'te défonce";
+            } else if (m == 3 && Trois < 30) {
+              document.getElementById("msg").innerHTML = "Si tu tente j'te défonce";
+            }
 
           }
         </script>
