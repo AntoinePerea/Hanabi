@@ -286,13 +286,14 @@
             var Deux = Math.round(resultatDeux * cent)
             var Trois = Math.round(resultatTroiscarjesaisquetuvaletesterpabloalorsquecarriverajamaisfdpxD * cent)
 
-
+            if (m == 0) {
+              document.getElementById("result").innerHTML = "C'est quoi ton problème Pablo";}
 
             if (m == 1) {
               document.getElementById("result").innerHTML = Un + "%";
             } else if (m == 2) {
               document.getElementById("result").innerHTML = Deux + "%";
-            } else {
+            } else if (m ==3){
               document.getElementById("result").innerHTML = Trois + "%";
             }
 
