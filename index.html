@@ -15,7 +15,7 @@
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -64,7 +64,7 @@
     <div class="hero-container" data-aos="fade-in">
       <h1 style="margin-top: 50px;">Guide du petit Hanabiste</h1>
       <h2>Pour finir le jeu tout en gardant les amitiés intactes</h2>
-      <img style="height: 500px;"src="assets\img\Sensoji Temple.jpg" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
+      <img style="height: 500px;" src="assets\img\Sensoji Temple.jpg" alt="Hero Imgs" data-aos="zoom-out" data-aos-delay="100">
       <a href="#about-us" class="btn-get-started scrollto">C'est partit cochon</a>
 
     </div>
@@ -90,15 +90,16 @@
               <h2>Les 7 commandements</h2>
 
 
-              <ol >
-                <li >Je joue immédiatement une carte dont je dispose de suffisamment d'informations.</li>
-                <li >J'indique au minimum 2 informations par indices, à moins qu'une carte indispensable soit sur le point d'être défaussée.</li>
-                <li >Si je dois me défausser, je choisis toujours la carte non étiquetée la plus ancienne.</li>
-                <li >Lorsque j'indique la couleur ou le nombre d'une carte qui ne dispose alors que de cette seule information, cela revient à indiquer que la carte peux être jouée immédiatement SAUF si cette carte était sur le point d'être défaussée.</li>
-                <li >S'il ne reste qu'un seul indice et que le prochain joueur ne dispose pas de suffisamment d'informations pour jouer; utiliser l'indice revient à lui indiquer que sa carte non étiquetée la plus ancienne est défaussable.</li>
-                <li >Lorsqu'une carte étiquetée est présente dans mon jeu, je considère toujours en premier lieu qu'elle ne doit pas être défaussée.</li>
+              <ol>
+                <li>Je joue immédiatement une carte dont je dispose de suffisamment d'informations.</li>
+                <li>J'indique au minimum 2 informations par indices, à moins qu'une carte indispensable soit sur le point d'être défaussée.</li>
+                <li>Si je dois me défausser, je choisis toujours la carte non étiquetée la plus ancienne.</li>
+                <li>Lorsque j'indique la couleur ou le nombre d'une carte qui ne dispose alors que de cette seule information, cela revient à indiquer que la carte peux être jouée immédiatement SAUF si cette carte était sur le point d'être défaussée.
+                </li>
+                <li>S'il ne reste qu'un seul indice et que le prochain joueur ne dispose pas de suffisamment d'informations pour jouer; utiliser l'indice revient à lui indiquer que sa carte non étiquetée la plus ancienne est défaussable.</li>
+                <li>Lorsqu'une carte étiquetée est présente dans mon jeu, je considère toujours en premier lieu qu'elle ne doit pas être défaussée.</li>
 
-                <li >Je ne compte pas sur le joueur suivant pour donner une information que je juge utile.</li>
+                <li>Je ne compte pas sur le joueur suivant pour donner une information que je juge utile.</li>
 
               </ol>
 
@@ -200,57 +201,98 @@
       </div>
 
     </section><!-- End Screenshots Section -->
-  <section class ="text-center">
+    <section class="text-center">
 
-<img style ="height: 300px;" src="assets\img\CAT NINJA.jpg" alt="Oups">
-</section>
+      <img style="height: 300px;" src="assets\img\CAT NINJA.jpg" alt="Oups">
+    </section>
     <!-- ======= Team Section ======= -->
     <section id="team" class="padd-section ">
 
       <div class="container" data-aos="fade-up">
         <div class="section-title text-center">
 
-          <h2>La carte X est-elle dans mon jeu ? </h2></div>
-          <h5 class="separator"></h5>
-
-          <p id="calculateur" class="text-center">
-
-              <i>Equation générale : probabilité d'avoir une carte X dans ses mains = ( nombre de cartes restantes de cette valeur - cartes visibles de cette valeur ) / (nombre total de cartes pertinentes en jeu)
-            </i></p><br>
-
-            <form>
-Nombre de cartes restantes de cette valeur : <br><input type="text" id="firstNumber" /><br>
-Nombre de cartes visibles de cette valeur : <br><input type="text" id="secondNumber" /><br>
-Nombre de cartes total en jeu (- la somme des cartes visibles et non pertinentes) : <br><input type="text" id="third" /><br>
-
-<input type="button" onClick="multiplyBy()" Value="GO" />
-</form>
-<p style='color: #DC143C;'><strong>Probas que cette carte soit dans mon jeu : </strong><br>
-<span style ="font-size: 50px;"id = "result"></span>
-</p>
-
-<script>
-
-function multiplyBy()
-{
-        num1 = document.getElementById("firstNumber").value;
-        num2 = document.getElementById("secondNumber").value;
-        num3 = document.getElementById("third").value;
-        var num4 = Number("100")
-        var num5 = Number("5")
-
-
-
-        document.getElementById("result").innerHTML = Math.round((( (num1 - num2) / num3 )*num4)*num5) + "%";
-}
-
-
-
-
-</script>
-
-
+          <h2>La carte X est-elle dans mon jeu ? </h2>
         </div>
+        <h5 class="separator"></h5>
+
+        <p id="calculateur" class="text-center">
+
+          <i>Loi hypergéométrique de paramètres (Cartes pertinentes en main; probabilité de tirer la carte donnée; Nombre total de cartes pertinentes)
+          </i></p><br>
+
+        <form>
+          Nombre de cartes restantes de cette valeur : <br><input type="text" id="firstNumber" /><br>
+          Nombre de cartes visibles de cette valeur : <br><input type="text" id="secondNumber" /><br>
+          Nombre de cartes total en jeu (- la somme des cartes visibles et non pertinentes) : <br><input type="text" id="total" /><br>
+          Nombre de cartes pertinentes dans mon jeu : <br><input type="text" id="perti" /><br>
+
+
+
+          <input type="button" onClick="multiplyBy()" Value="GO" />
+        </form>
+        <p style='color: #DC143C;'><strong>Probas que cette carte soit dans mon jeu : </strong><br>
+          <span style="font-size: 50px;" id="result"></span>
+        </p>
+
+        <script>
+          function multiplyBy() {
+
+            function factorialize(num) {
+              var count = 1;
+              for (var i = 1; i <= num; i++) {
+                count *= i;
+              }
+              return count;
+            }
+
+            function CoeffBinomial(pair1, pair2) {
+
+              var coeff = factorialize(pair1) / (factorialize(pair2) * (factorialize(pair1 - pair2)))
+
+              return coeff
+
+
+            }
+
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            u = document.getElementById("total").value;
+            n = document.getElementById("perti").value;
+
+
+            var cent = Number("100")
+            var m = num1 - num2
+            var c1 = CoeffBinomial(m, 1)
+            var c2 = CoeffBinomial(u - m, n - 1)
+            var c3 = CoeffBinomial(u, n)
+            var c1b = CoeffBinomial(m, 2)
+            var c2b = CoeffBinomial(u - m, n - 2)
+            var c1d = CoeffBinomial(m, 3)
+            var c2d = CoeffBinomial(u - m, n - 3)
+
+            var exactementUn = c1 * c2 / c3
+            var exactementDeux = c1b * c2b / c3
+            var exactementTrois = c1d * c2d / c3
+            var resultatDeux = exactementUn + exactementDeux
+            var resultatTroiscarjesaisquetuvaletesterpabloalorsquecarriverajamaisfdpxD = exactementUn + exactementDeux + exactementTrois
+
+
+            if (m == 1) {
+              document.getElementById("result").innerHTML = Math.round(exactementUn * cent) + "%";
+            } else if (m == 2) {
+              document.getElementById("result").innerHTML = Math.round(resultatDeux * cent) + "%";
+            } else {
+              document.getElementById("result").innerHTML = Math.round(resultatTroiscarjesaisquetuvaletesterpabloalorsquecarriverajamaisfdpxD * cent) + "%";
+            }
+
+
+
+
+          }
+        </script>
+
+
+      </div>
 
 
       </div>
@@ -282,7 +324,7 @@ function multiplyBy()
                     <div class="top-top">
 
                       <h2>J'ai évité la catastrophe</h2>
-                      <p>Heureusement que je suis tombée sur ton tutoriel, mon couple était mis à mal à cause de ce jeu !  </p>
+                      <p>Heureusement que je suis tombée sur ton tutoriel, mon couple était mis à mal à cause de ce jeu ! </p>
                       <h4>Mélodie<span>Hobbyiste</span></h4>
 
                     </div>
